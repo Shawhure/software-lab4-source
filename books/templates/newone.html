@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>
+		New one!
+		</title>
+	</head>
+	<body>
+		{% if error %}
+		<h4>Please input all the items!</h4>
+		{% endif %}
+		<form action="" method="get">
+			<input type="text" name="title" placeholder="Title" value="{{book.Title}}"/><br />
+			<input type="text" name="authorID" placeholder="Author ID" value="{{book.AuthorID.AuthorID}}"/><br />
+			<input type="text" name="name" placeholder="Author Name" value="{{book.AuthorID.Name}}"/><br />
+			<input type="text" name="age" placeholder="Author Age" value="{{book.AuthorID.Age}}"/><br />
+			<input type="text" name="country" placeholder="Author Country" value="{{book.AuthorID.Country}}"/><br />
+			<input type="text" name="isbn" placeholder="ISBN" value="{{book.ISBN}}"/><br />
+			<input type="text" name="price" placeholder="Price" value="{{book.Price}}"/><br />
+			<input type="text" name="pub" placeholder="Publisher" value="{{book.Publisher}}"/><br />
+			<input type="date" name="date" placeholder="PublishDate" value="{{book.PublishDate|date:'Y-M-D'}}"/><br />
+			<input type="submit" value="Save">
+		</form>
+		<a href="/newone/">Empty</a>
+		<br/>
+		<a href="/">HomePage</a>
+		<a href="/search/">Go to Search</a>
+	</body>
+</html>

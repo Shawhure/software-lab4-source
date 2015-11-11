@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>
+		Searching!
+		</title>
+	</head>
+	<body>
+		<table border="5">
+			<tr>
+				<td>ISBN</td>
+				<td>{{book.ISBN}}</td>
+			</tr>
+			<tr>
+				<td>Title</td>
+				<td>{{book.Title}}</td>
+			</tr>
+			<tr>
+				<td>AuthorID</td>
+				<td>{{book.AuthorID.AuthorID}}</td>
+			</tr>
+			<tr>
+				<td>Author Name</td>
+				<td>{{book.AuthorID.Name}}</td>
+			</tr>
+			<tr>
+				<td>Author Age</td>
+				<td>{{book.AuthorID.Age}}</td>
+			</tr>
+			<tr>
+				<td>Author Country</td>
+				<td>{{book.AuthorID.Country}}</td>
+			</tr>
+			<tr>
+				<td>Publisher</td>
+				<td>{{book.Publisher}}</td>
+			</tr>
+			<tr>
+				<td>Publish Date</td>
+				<td>{{book.PublishDate}}</td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td>{{book.Price}}</td>
+			</tr>
+		</table>
+		<a href="/edit/?isbn={{book.ISBN}}">Edit</a>
+		<a href="/delete/?isbn={{book.ISBN}}">Delete</a>
+		<br/>
+		<a href="/">首页</a>
+		<a href="/search/">返回搜索</a>
+	</body>
+</html>

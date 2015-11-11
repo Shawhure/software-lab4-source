@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8">
+	<head>
+		<title>
+		Edit!
+		</title>
+	</head>
+	<body>
+		{% if error %}
+		<h4>Please input all the items!</h4>
+		{% endif %}
+		<form action="/saveedit/" method="get">
+		<input type="text" name="ISBN" value="{{isbn}}" />ISBN <br />       
+		<input type="text" name="title" value="{{title}}"/>Title       <br />
+		<input type="text" name="authorID" value="{{authorID}}" />AuthorID    <br />
+		<input type="text" name="name" value="{{name}}"/>Name        <br />
+		<input type="text" name="age" value="{{age}}"/>Age         <br />
+		<input type="text" name="country" value="{{country}}"/>Country     <br />
+		<input type="text" name="price" value="{{price}}"/>Price       <br />
+		<input type="text" name="pub" value="{{pub}}"/>Publisher   <br />
+		<input type="date" name="pubdate" value="{{pubdate|date:'Y-M-D'}}"/>PublishDate <br />
+        <input type="submit" value="Save">
+		{% if success %}
+			<h4>Save successfully!</h4>
+		{% endif %}
+		</form>
+		<a href="/">HomePage</a>
+		<a href="/search/">Return Search</a>
+	</body>
+</html>

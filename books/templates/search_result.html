@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>
+		Searching!
+		</title>
+	</head>
+	<body>
+		<p>You searched for: <strong>{{ query }}</strong></p>
+
+		{% if books %}
+			<p>Found {{ books|length }} book{{ books|pluralize }}.</p>
+			<ul>
+				{% for book in books %}
+				<li>
+					<a href="details/?isbn={{book.ISBN}}">{{ book.Title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<p>No books matched your search criteria.</p>
+		{% endif %}
+        <a href="/newone/">添加</a>
+		<a href="/search/">返回搜索</a>
+        <a href="/">首页</a>
+	</body>
+</html>
