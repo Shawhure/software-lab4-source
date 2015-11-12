@@ -1,4 +1,5 @@
 #update for b3 id = 2
+#update for C4 id = 2
 import os  
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))  
 import os.path   
