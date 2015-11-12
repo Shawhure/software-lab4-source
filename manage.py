@@ -2,7 +2,7 @@
 import os
 import sys
 import time #fix bug 3
-
+#fix it for branch b1
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pickbooksup.settings")
